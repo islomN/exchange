@@ -8,7 +8,7 @@ using RestSharp;
 
 namespace ExchangeApi.CurrencyLayer
 {
-    public static class CurrencyServer
+    public static class CurrencyLayerClient
     {
         public static async Task<TBaseResult<CurrencyServerResponse>> GetCurrenciesInServer()
         {

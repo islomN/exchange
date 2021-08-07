@@ -133,7 +133,7 @@ namespace ExchangeApi.Logics
                 return new TBaseResult<IEnumerable<KeyValuePair<string, decimal>>>(currenciesResult);
             }
 
-            var currenciesInServerResult =  await CurrencyServer.GetCurrenciesInServer();
+            var currenciesInServerResult =  await CurrencyLayerClient.GetCurrenciesInServer();
             if (!currenciesInServerResult.Success)
             {
                 return new TBaseResult<IEnumerable<KeyValuePair<string, decimal>>>("Service not available, try again later!", false);
